@@ -1,0 +1,29 @@
+.Card {
+  @apply flex flex-col max-w-[400px] max-h-[400px]
+  m-3 p-5 drop-shadow bg-white
+  border border-gray-200 rounded;
+  &:hover {
+    @apply drop-shadow-lg border-gray-300;
+  }
+  &-img {
+    @apply w-full h-full bg-gray-600 bg-opacity-40 rounded p-2 overflow-hidden;
+    img {
+      @apply w-full h-full object-contain max-h-[150px] transition-all;
+      background-size: 40px 40px;
+      background-image: radial-gradient(circle, #000000 1px, rgba(0, 0, 0, 0) 1px);
+    }
+    &:hover {
+      img {
+        transform: scale(1.2);
+      }
+    }
+  }
+  &-title {
+    @apply flex flex-col text-lg font-bold;
+    &::after {
+      @apply w-full border-b border-gray-400 mb-2;
+      content: " ";
+    }
+  }
+  &-content {}
+}

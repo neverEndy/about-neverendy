@@ -20,10 +20,6 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
-    "paths": {
-      "@core/": ["./src/core/"],
-      "@components/": ["./src/components/"]
-    }
   },
   "include": [
     "src"

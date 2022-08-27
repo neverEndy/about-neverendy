@@ -1,9 +1,3 @@
 .App-root{
-  @apply h-screen flex items-center;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  .SnakeContainer{
-    @apply h-screen w-screen bg-blue-200 outline outline-blue-500;
-  }
+  @apply h-screen flex flex-col items-center;
 }
