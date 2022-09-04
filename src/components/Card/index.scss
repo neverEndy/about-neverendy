@@ -19,11 +19,23 @@
     }
   }
   &-title {
-    @apply flex flex-col text-lg font-bold;
+    @apply flex flex-col;
+    &-main {
+      @apply text-lg font-bold;
+    }
+    &-sub {
+      @apply flex justify-between text-gray-600 text-sm;
+      &-title {
+        @apply font-bold;
+      }
+      &-moreLink {}
+    }
     &::after {
       @apply w-full border-b border-gray-400 mb-2;
       content: " ";
     }
   }
-  &-content {}
+  &-content {
+    @apply whitespace-pre-line;
+  }
 }

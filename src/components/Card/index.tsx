@@ -5,6 +5,8 @@ export interface ICardProps {
   imgSrc: string
   imgLink?: string
   title: string
+  moreLink?: string
+  author?: string
   children: React.ReactNode
 }
 
@@ -12,6 +14,8 @@ const Card = ({
   imgSrc,
   imgLink,
   title,
+  author,
+  moreLink,
   children
 }: ICardProps) => {
   return (
@@ -25,7 +29,13 @@ const Card = ({
             : <img src={imgSrc} />
         }
       </div>
-      <div className="Card-title">{title}</div>
+      <div className="Card-title">
+        <div className="Card-title-main">{title}</div>
+        <div className="Card-title-sub">
+          <span className="Card-title-sub-title">{author}</span>
+          <a className="Card-title-sub-endLink" href={moreLink} target='_blank' rel='noreferrer'><p>{'> '}more</p></a>
+        </div>
+      </div>
       <div className="Card-content">
         {children}
       </div>
